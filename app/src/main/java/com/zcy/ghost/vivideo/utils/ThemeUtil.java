@@ -1,27 +1,25 @@
 package com.zcy.ghost.vivideo.utils;
 
 import android.content.Context;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
 
 import com.afollestad.materialdialogs.color.ColorChooserDialog;
 import com.zcy.ghost.vivideo.R;
 import com.zcy.ghost.vivideo.app.Constants;
 import com.zcy.ghost.vivideo.widget.theme.Theme;
 
-import org.simple.eventbus.EventBus;
-
 /**
  * Created by yuexingchuan on 17/9/17.
  */
 
 public class ThemeUtil {
+//
     public static void onColorSelection(Context context, ColorChooserDialog dialog, int selectedColor) {
         if (selectedColor == ThemeUtils.getThemeColor(context, R.attr.colorPrimary))
             return;
 
         if (selectedColor == context.getResources().getColor(R.color.colorBluePrimary)) {
             context.setTheme(R.style.BlueTheme);
+//            SharedPreferences 保存在sp
             PreUtils.setCurrentTheme(context, Theme.Blue);
             PreUtils.putString(context, Constants.PRIMARYCOLOR, "#2196F3");
             PreUtils.putString(context, Constants.TITLECOLOR, "#ffffff");

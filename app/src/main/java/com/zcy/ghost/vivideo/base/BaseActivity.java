@@ -91,6 +91,7 @@ public abstract class BaseActivity extends SupportActivity {
     }
 
     private void onPreCreate() {
+//        seachal annotation: 从sp中获取主题信息，并设置在theme中
         Theme theme = PreUtils.getCurrentTheme(this);
         switch (theme) {
             case Blue:

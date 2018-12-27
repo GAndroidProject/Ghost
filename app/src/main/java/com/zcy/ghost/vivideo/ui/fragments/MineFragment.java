@@ -136,6 +136,7 @@ public class MineFragment extends BaseMvpFragment<MinePresenter> implements Mine
             case R.id.rl_collection:
                 getContext().startActivity(new Intent(mContext, CollectionActivity.class));
                 break;
+//                切换主题
             case R.id.rl_them:
                 EventBus.getDefault().post("", MineFragment.SET_THEME);
                 break;
